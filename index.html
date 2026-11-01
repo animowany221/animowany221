@@ -59,9 +59,9 @@
         <p>Dziękuję za odwiedzenie strony!</p>
     </marquee>
     <script>
-        let zmienionyTekst = False;
+        let zmienionyTekst = false;
         function changeText() {
-            if (typeof zmienionyTekst !== 'undefined' && zmienionyTekst === True) {
+            if (typeof zmienionyTekst !== 'undefined' && zmienionyTekst === true) {
                 alert("Tekst został już zmieniony.");
                 return;
             }
@@ -69,7 +69,7 @@
                 document.querySelector("h1").textContent = "lubię placki";
                 document.querySelector("img").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Q7ELp5PSo09M1-wJh3cU-x4U7hHsoA5IANQruCWOhA&s=10";
                 document.querySelector("img").alt = "pancake";
-                let zmienionyTekst = True;
+                let zmienionyTekst = true;
             }
         }
     </script>
