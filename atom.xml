@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mapa witryny — animowany221</title>
+  <id>https://animowany221.github.io/animowany221/</id>
+  <updated>2026-11-06T23:00:00+01:00</updated>
+  <link rel="self" href="https://animowany221.github.io/animowany221/atom.xml" />
+  <link href="https://animowany221.github.io/animowany221/" />
+  <entry><title>Strona główna</title><id>https://animowany221.github.io/animowany221/</id><link href="https://animowany221.github.io/animowany221/" /><updated>2026-11-06T23:00:00+01:00</updated></entry>
+  <entry><title>Informacje</title><id>https://animowany221.github.io/animowany221/informacje/</id><link href="https://animowany221.github.io/animowany221/informacje/" /><updated>2026-11-06T23:00:00+01:00</updated></entry>
+  <entry><title>Projekty</title><id>https://animowany221.github.io/animowany221/projekty/</id><link href="https://animowany221.github.io/animowany221/projekty/" /><updated>2026-11-06T23:00:00+01:00</updated></entry>
+</feed>
