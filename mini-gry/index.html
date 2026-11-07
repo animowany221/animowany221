@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
     <head>
-        <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="amplituda.png" />
-        <meta charset="utf-8" />
         <title>Mini Gierki</title>
-        <meta property="og:title" content="Amplituda – Moja strona internetowa">
+        <meta name="description" content="Wypróbuj mini gry stworzone przez Amplitudę. Jest to część eksperymentu, w którym tworzę stronę internetową i staram się ją jak najlepiej wyświetlać.">
+        <meta property="og:title" content="Amplituda – Mini gierki">
         <meta property="og:site_name" content="Amplituda">
-        <meta property="og:description" content="Witaj na mojej stronie internetowej!">
+        <meta property="og:description" content="Witaj na mojej stronie internetowej! Na tej podstronie znajdziesz mini gierki, które sam stworzyłem.">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://animowany221.github.io/animowany221/">
+        <meta property="og:url" content="https://animowany221.github.io/animowany221/mini-gry/">
+        <link rel="canonical"
+        href="https://animowany221.github.io/animowany221/mini-gry/">
         <script type="application/ld+json">{
 
             "@context": "https://schema.org",
@@ -29,26 +30,8 @@
                 margin: 0;
                 padding: 20px;
             }
-            h1 {
-                color: #ffffff;
-            }
-            h2 {
-                color: #ffffff;
-            }
-            h3 {
-                color: #ffffff;
-            }
-            h4 {
-                color: #ffffff;
-            }
-            h5 {
-                color: #ffffff;
-            }
-            h6 {
-                color: #ffffff;
-            }
-            p {
-                color: #ffffff;
+            h1, h2, h3, h4, h5, h6, p {
+            color: white;
             }
             ul {
                 list-style-type: none;
@@ -71,13 +54,7 @@
                 margin: 4px 2px;
                 cursor: pointer;
                 border-radius: 4px;
-            }
-            ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            li {
-                margin-bottom: 10px;
+                transition: 0.2s;
             }
             a {
                 text-decoration: none;
@@ -86,10 +63,19 @@
             a:hover {
                 text-decoration: underline;
             }
+            button:hover {
+            background-color: #0056b3;
+            transform: scale(1.03);
+        }
         </style>
     </head>
     <body>
         <h1>Mini Gierki</h1>
+        <h2 id="wynik" aria-live="polite">
+        Kliknij przycisk, aby wygenerować wiadomość!
+        </h2>
+        <img id="obrazek" src="" alt="Losowy obrazek" style="max-width: 100%; height: auto;">
+        <p>obrazek "wygenerowany" przez JavaGPT 1.0</p>
         <!--<button onclick="startGame()">Gra zgadywanki</button>-->
         <button onclick="javagpt()">Gra w JavaGPT</button>
         <button onclick="window.location.href='/animowany221/'">powrót do strony głównej</button>
@@ -103,6 +89,9 @@
                 alert("Gra zgadywanki została uruchomiona!");
             }*/
             function javagpt() {
+                if (typeof imięużytkownika === 'undefined') {
+                    imięużytkownika = prompt("Jak masz na imię?") + ". ";
+                }
                 const rozpoczęciezdania = [
                     "Witaj! ",
                     "Cześć! ",
@@ -113,7 +102,9 @@
                     "Jak się masz? ",
                     "Co słychać? ",
                     "Hejo! ",
-                    "Miło cię widzieć! "
+                    "Miło cię widzieć! ",
+                    "Witam! ",
+                    "Cześć, jak się masz? "
                 ];
                 const rozwinięciezdania = [
                     "Mam nadzieję, że masz dobry dzień. ",
@@ -125,7 +116,10 @@
                     "Czy wiesz, że mogę tworzyć historie? ",
                     "Chciałbym cię poprosić o opinię. ",
                     "Czy wiesz, że mogę tworzyć wiersze? ",
-                    "Chciałbym cię zaprosić do rozmowy. "
+                    "Chciałbym cię zaprosić do rozmowy. ",
+                    "Czy wiesz, że mogę tworzyć żarty? ",
+                    "Chciałbym cię poprosić o sugestie. ",
+                    "Czy wiesz, że mogę tworzyć piosenki? "
                 ];
                 const rozwinięciezdania2 = [
                     "Skoro tu jesteś chciałbym prosić cię o polecenie tej strony innym. ",
@@ -138,9 +132,16 @@
                     "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi spostrzeżeniami na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
                     "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi refleksjami na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
                     "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi przemyśleniami na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
-                    "możesz klikać przycisk 'Gra w JavaGPT' aby generować kolejne wiadomości 😎. ",
-                    "jeśli chcesz skopiować ten kod autor raczej nie będzie obrażony, ale proszę o podanie źródła. :) ",
-                    "jeśli chciałbyś pomóc przy tej stronie oto mój mail: rafciomaj123@gmail.com "
+                    "Możesz klikać przycisk 'Gra w JavaGPT' aby generować kolejne wiadomości 😎. ",
+                    "Jeśli chcesz skopiować ten kod, autor raczej nie będzie obrażony, ale proszę o podanie źródła. :) ",
+                    "Jeśli chciałbyś pomóc przy tworzeniu tej strony. To mój mail: rafciomaj123@gmail.com ",
+                    "Sprawdź też stronę główną, może znajdziesz coś fajnego. (; ",
+                    "Jeżeli chcesz, możesz też sprawdzić inne podstrony. ",
+                    "Spróbuj też innych mini gier, może znajdziesz coś ciekawego. "
+                ]
+                const rozwinięciezdania3 = [
+                    "oto jeden z wierszy które wymyślił mój autor ODA DO ŻÓŁTEGO KABLA: Gdy prądy snuły się nad elektroniką STANĄŁ! żółty kabelek był ubrany w gumę i plastik zawsze dzielnie służył gdy prąd był już blisko gdy śmierć była już o 1A On bezpecznik - w czasach niebezpiecznych poświęcił swe życie by inne kable mogły żyć by mogły dalej przewodzić by mogły dalej śłużyć Żółtego Kabla pochowano na ołtarzu elektryczności",
+                    "oto przepis na naleśniki: Składniki: 1 szklanka mąki, 2 jajka, 1 szklanka mleka, szczypta soli, olej do smażenia. Wykonanie: W misce wymieszaj mąkę, jajka, mleko i sól, aż powstanie gładkie ciasto. Rozgrzej patelnię z odrobiną oleju i wlej porcję ciasta, rozprowadzając je równomiernie. Smaż naleśnika przez około 1-2 minuty z każdej strony, aż będzie złocisty. Podawaj z ulubionymi dodatkami."
                 ]
                 const zakończeniezdania = [
                     "Dziękuję za uwagę. ",
@@ -153,21 +154,52 @@
                     "Powodzenia! ",
                     "Miłego wieczoru! ",
                     "Do następnego razu! ",
-                    "widzimy się w następnej wiadomości! "
+                    "widzimy się w następnej wiadomości! ",
+                    "Dzięki że wszedłeś na tą stronę! "
                 ];
+                const obrazki = [
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNs9qMjnfzJCs1xita_EYJDDNSvw5BWqhh8VCfpNCHAvpMGy7Cf_V-8xY&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Q7ELp5PSo09M1-wJh3cU-x4U7hHsoA5IANQruCWOhA&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQIzNHikhBeJJNg0q5dAKVJyY2MXW2ybka3E4K0-3PdQ&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_TpfOY4HUTdQ0qzYc9463oCeIlN2fmU9EB9a99m9HA&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_TpfOY4HUTdQ0qzYc9463oCeIlN2fmU9EB9a99m9HA&s=10",
+                    "https://zmaslo.pl/wp-content/themes/zmaslo/assets/images/hero.png",
+                    "https://img.wattpad.com/cover/205103696-288-k816693.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUOCVAvmQwQRY8R3IfUhDOecBX4fpg7MVdIq3wZ7MteQ&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL1o2kBuKItlJslSkU6HW43K6bgeF2ZFPuyWvOr0cxXQ&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnzdaZnKTeiUM0ROci3ct4_L1LPiU7tJpxiQt81WBYyA&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe1dzMBqgXK4Ig4vTlyvi7lwqTC8EQLsNwxwA3leE_Yb9VFq_M7JqAEd8&s=10"
+                ];
+                let długość = Math.floor(Math.random() * 3) + 1; // losowa długość zdania od 1 do 3
+                let obrazek = Math.floor(Math.random() * 8) + 1; // losowy obrazek od 1 do 8
+                if (długość === 1) {
+                    let rozpoczęcie = rozpoczęciezdania[Math.floor(Math.random() * rozpoczęciezdania.length)];
+                    let rozwinięcie = rozwinięciezdania[Math.floor(Math.random() * rozwinięciezdania.length)];
+                    let zakończenie = zakończeniezdania[Math.floor(Math.random() * zakończeniezdania.length)];
+                    let zdanie = rozpoczęcie + imięużytkownika + rozwinięcie + zakończenie;
+                    document.querySelector("h2").textContent = zdanie;
+                } else if (długość === 2) {
+                    let rozpoczęcie = rozpoczęciezdania[Math.floor(Math.random() * rozpoczęciezdania.length)];
+                    let rozwinięcie = rozwinięciezdania[Math.floor(Math.random() * rozwinięciezdania.length)];
+                    let rozwinięcie2 = rozwinięciezdania2[Math.floor(Math.random() * rozwinięciezdania2.length)];
+                    let zakończenie = zakończeniezdania[Math.floor(Math.random() * zakończeniezdania.length)];
+                    let zdanie = rozpoczęcie + imięużytkownika + rozwinięcie + rozwinięcie2 + zakończenie;
+                    document.querySelector("h2").textContent = zdanie;
+                } else {
                 let rozpoczęcie = rozpoczęciezdania[Math.floor(Math.random() * rozpoczęciezdania.length)];
                 let rozwinięcie = rozwinięciezdania[Math.floor(Math.random() * rozwinięciezdania.length)];
                 let rozwinięcie2 = rozwinięciezdania2[Math.floor(Math.random() * rozwinięciezdania2.length)];
+                let rozwinięcie3 = rozwinięciezdania3[Math.floor(Math.random() * rozwinięciezdania3.length)];
                 let zakończenie = zakończeniezdania[Math.floor(Math.random() * zakończeniezdania.length)];
-                let zdanie = rozpoczęcie + rozwinięcie + rozwinięcie2 + zakończenie;
-                document.querySelector("h1").textContent = zdanie;
+                let zdanie = rozpoczęcie + imięużytkownika + rozwinięcie + rozwinięcie2 + rozwinięcie3 + ". " + zakończenie;
+                document.querySelector("h2").textContent = zdanie;
                 // Tutaj możesz dodać logikę gry w JavaGPT
-                alert("Gra w JavaGPT została uruchomiona!");
             }
+            obrazki.concat(obrazki[Math.floor(Math.random() * obrazki.length)]);
+            let obrazekURL = obrazki[Math.floor(Math.random() * obrazki.length)];
+            document.getElementById("obrazek").src = obrazekURL;
+        } 
         </script>
-    
-    </body>
-</html>
     
     </body>
 </html>
