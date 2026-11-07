@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="amplituda.png" />
+        <meta charset="utf-8" />
+        <title>Mini Gierki</title>
+        <meta property="og:title" content="Amplituda – Moja strona internetowa">
+        <meta property="og:site_name" content="Amplituda">
+        <meta property="og:description" content="Witaj na mojej stronie internetowej!">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://animowany221.github.io/animowany221/">
+        <script type="application/ld+json">{
+
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Amplituda",
+            "alternateName": "amplituda",
+            "url": "https://animowany221.github.io/animowany221/"
+            }
+        </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_TpfOY4HUTdQ0qzYc9463oCeIlN2fmU9EB9a99m9HA&s=10');
+                background-size: cover;
+                margin: 0;
+                padding: 20px;
+            }
+            h1 {
+                color: #ffffff;
+            }
+            h2 {
+                color: #ffffff;
+            }
+            h3 {
+                color: #ffffff;
+            }
+            h4 {
+                color: #ffffff;
+            }
+            h5 {
+                color: #ffffff;
+            }
+            h6 {
+                color: #ffffff;
+            }
+            p {
+                color: #ffffff;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                color: #ffffff;
+            }
+            li {
+                margin-bottom: 10px;
+                color: #ffffff;
+            }
+            button {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: #007BFF;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Mini Gierki</h1>
+        <!--<button onclick="startGame()">Gra zgadywanki</button>-->
+        <button onclick="javagpt()">Gra w JavaGPT</button>
+        <button onclick="window.location.href='/animowany221/'">powrót do strony głównej</button>
+        <marquee behavior="scroll" direction="left" scrollamount="20">
+            <p>Dzięki że dotrwałeś do tego momentu!</p>
+        </marquee>
+        <script>
+            /*function startGame() {
+                let secretNumber = Math.floor(Math.random() * 10) + 1;
+                // Tutaj możesz dodać logikę gry zgadywanki
+                alert("Gra zgadywanki została uruchomiona!");
+            }*/
+            function javagpt() {
+                const rozpoczęciezdania = [
+                    "Witaj! ",
+                    "Cześć! ",
+                    "Hej! ",
+                    "Siema! ",
+                    "Dzień dobry! ",
+                    "Co tam? ",
+                    "Jak się masz? ",
+                    "Co słychać? ",
+                    "Hejo! ",
+                    "Miło cię widzieć! "
+                ];
+                const rozwinięciezdania = [
+                    "Mam nadzieję, że masz dobry dzień. ",
+                    "Chciałbym cię zapytać o coś. ",
+                    "Czy wiesz, że mogę generować tekst? ",
+                    "Chciałbym cię poprosić o pomoc. ",
+                    "Czy wiesz, że mogę odpowiadać na pytania? ",
+                    "Chciałbym cię zaprosić do zabawy. ",
+                    "Czy wiesz, że mogę tworzyć historie? ",
+                    "Chciałbym cię poprosić o opinię. ",
+                    "Czy wiesz, że mogę tworzyć wiersze? ",
+                    "Chciałbym cię zaprosić do rozmowy. "
+                ];
+                const rozwinięciezdania2 = [
+                    "Skoro tu jesteś chciałbym prosić cię o polecenie tej strony innym. ",
+                    "Skoro tu jesteś chciałbym prosić cię o ocenę tej strony. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o opinię na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o sugestie dotyczące tej strony. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi pomysłami na tę stronę. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi doświadczeniami związanych z tą stroną. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi wrażeniami na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi spostrzeżeniami na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi refleksjami na temat tej strony. Mój mail to: rafciomaj123@gmail.com ",
+                    "Skoro tu jesteś chciałbym prosić cię o podzielenie się swoimi przemyśleniami na temat tej strony. Mój mail to: rafciomaj123@gmail.com "
+                ]
+                const zakończeniezdania = [
+                    "Dziękuję za uwagę. ",
+                    "Miłego dnia! ",
+                    "Do zobaczenia! ",
+                    "Trzymaj się! ",
+                    "Na razie! ",
+                    "Do usłyszenia! ",
+                    "Baw się dobrze! ",
+                    "Powodzenia! ",
+                    "Miłego wieczoru! ",
+                    "Do następnego razu! "
+                ];
+                let rozpoczęcie = rozpoczęciezdania[Math.floor(Math.random() * rozpoczęciezdania.length)];
+                let rozwinięcie = rozwinięciezdania[Math.floor(Math.random() * rozwinięciezdania.length)];
+                let rozwinięcie2 = rozwinięciezdania2[Math.floor(Math.random() * rozwinięciezdania2.length)];
+                let zakończenie = zakończeniezdania[Math.floor(Math.random() * zakończeniezdania.length)];
+                let zdanie = rozpoczęcie + rozwinięcie + rozwinięcie2 + zakończenie;
+                document.querySelector("h1").textContent = zdanie;
+                // Tutaj możesz dodać logikę gry w JavaGPT
+                alert("Gra w JavaGPT została uruchomiona!");
+            }
+        </script>
+    
+    </body>
+</html>
