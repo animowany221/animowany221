@@ -14,13 +14,12 @@
         <link rel="canonical"
         href="https://animowany221.github.io/animowany221/mini-gry/">
         <script type="application/ld+json">{
-
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Amplituda",
-            "alternateName": "amplituda",
-            "url": "https://animowany221.github.io/animowany221/"
-            }
+            "@type": "WebPage",
+            "name": "Mini Gierki",
+            "description": "Wypróbuj mini gry stworzone przez Amplitudę.",
+            "url": "https://animowany221.github.io/animowany221/mini-gry/"
+        }
         </script>
         <style>
             body {
@@ -76,18 +75,26 @@
         </h2>
         <img id="obrazek" src="" alt="Losowy obrazek" style="max-width: 100%; height: auto;">
         <p>obrazek "wygenerowany" przez JavaGPT 1.0</p>
-        <!--<button onclick="startGame()">Gra zgadywanki</button>-->
+        <button onclick="startGame()">Gra zgadywanki</button>
         <button onclick="javagpt()">Gra w JavaGPT</button>
+        <button onclick="kalkulator()">Dodawanie</button>
         <button onclick="window.location.href='/animowany221/'">powrót do strony głównej</button>
         <marquee behavior="scroll" direction="left" scrollamount="20">
-            <p>Dzięki że dotrwałeś do tego momentu!</p>
+            <p id="easter-egg" aria-live="polite">Cześć!</p>
         </marquee>
         <script>
-            /*function startGame() {
+            function startGame() {
                 let secretNumber = Math.floor(Math.random() * 10) + 1;
+                let guess = prompt("Zgadnij liczbę od 1 do 10:");
+                if (guess === secretNumber) {
+                    alert("Gratulacje! Zgadłeś liczbę!");
+                } else if (guess === null) {
+                    return;   
+                }else {
+                    alert("Niestety, to nie jest poprawna liczba. Prawidłowa liczba to: " + secretNumber);
+                }
                 // Tutaj możesz dodać logikę gry zgadywanki
-                alert("Gra zgadywanki została uruchomiona!");
-            }*/
+            }
             function javagpt() {
                 if (typeof imięużytkownika === 'undefined') {
                     imięużytkownika = prompt("Jak masz na imię?") + ". ";
@@ -104,7 +111,8 @@
                     "Hejo! ",
                     "Miło cię widzieć! ",
                     "Witam! ",
-                    "Cześć, jak się masz? "
+                    "Cześć, jak się masz? ",
+                    "Witaj,"
                 ];
                 const rozwinięciezdania = [
                     "Mam nadzieję, że masz dobry dzień. ",
@@ -141,7 +149,11 @@
                 ]
                 const rozwinięciezdania3 = [
                     "oto jeden z wierszy które wymyślił mój autor ODA DO ŻÓŁTEGO KABLA: Gdy prądy snuły się nad elektroniką STANĄŁ! żółty kabelek był ubrany w gumę i plastik zawsze dzielnie służył gdy prąd był już blisko gdy śmierć była już o 1A On bezpecznik - w czasach niebezpiecznych poświęcił swe życie by inne kable mogły żyć by mogły dalej przewodzić by mogły dalej śłużyć Żółtego Kabla pochowano na ołtarzu elektryczności",
-                    "oto przepis na naleśniki: Składniki: 1 szklanka mąki, 2 jajka, 1 szklanka mleka, szczypta soli, olej do smażenia. Wykonanie: W misce wymieszaj mąkę, jajka, mleko i sól, aż powstanie gładkie ciasto. Rozgrzej patelnię z odrobiną oleju i wlej porcję ciasta, rozprowadzając je równomiernie. Smaż naleśnika przez około 1-2 minuty z każdej strony, aż będzie złocisty. Podawaj z ulubionymi dodatkami."
+                    "oto przepis na naleśniki: Składniki: 1 szklanka mąki, 2 jajka, 1 szklanka mleka, szczypta soli, olej do smażenia. Wykonanie: W misce wymieszaj mąkę, jajka, mleko i sól, aż powstanie gładkie ciasto. Rozgrzej patelnię z odrobiną oleju i wlej porcję ciasta, rozprowadzając je równomiernie. Smaż naleśnika przez około 1-2 minuty z każdej strony, aż będzie złocisty. Podawaj z ulubionymi dodatkami.",
+                    "oto przepis na placki ziemniaczane: Składniki: 4 średnie ziemniaki, 1 jajko, 2 łyżki mąki, sól i pieprz do smaku, olej do smażenia. Wykonanie: Ziemniaki obierz i zetrzyj na tarce o drobnych oczkach. Odsącz nadmiar wody, a następnie wymieszaj starte ziemniaki z jajkiem, mąką, solą i pieprzem. Rozgrzej olej na patelni i nakładaj porcje masy ziemniaczanej, formując placki. Smaż je na złoty kolor z obu stron przez około 3-4 minuty. Podawaj gorące z ulubionymi dodatkami.",
+                    "oto przepis na pizzę: Składniki: 500 g mąki, 300 ml ciepłej wody, 1 łyżeczka soli, 1 łyżeczka cukru, 7 g suchych drożdży, 2 łyżki oliwy z oliwek, ulubione dodatki (np. sos pomidorowy, ser, warzywa, mięso). Wykonanie: W misce wymieszaj mąkę, sól i cukier. Dodaj drożdże i ciepłą wodę, a następnie oliwę. Wyrabiaj ciasto przez około 10 minut, aż będzie elastyczne. Przykryj je i odstaw na około godzinę do wyrośnięcia. Po tym czasie rozwałkuj ciasto na pożądaną grubość i przełóż na blachę do pieczenia. Posmaruj sosem pomidorowym i dodaj ulubione dodatki. Piecz w piekarniku nagrzanym do 220°C przez około 15-20 minut, aż pizza będzie złocista i chrupiąca.",
+                    "instrukcja obsługi mikrofalówki: 1. Podłącz mikrofalówkę do źródła zasilania. 2. Otwórz drzwi i umieść jedzenie na talerzu lub w odpowiednim naczyniu. 3. Zamknij drzwi mikrofalówki. 4. Wybierz odpowiedni czas i moc gotowania za pomocą panelu sterowania. 5. Naciśnij przycisk start, aby rozpocząć podgrzewanie. 6. Po zakończeniu gotowania, poczekaj kilka sekund przed otwarciem drzwi, aby uniknąć oparzeń parą. 7. Ostrożnie wyjmij jedzenie i sprawdź jego temperaturę przed spożyciem.",
+                    "instrukcja obsługi pralki: 1. Podłącz pralkę do źródła zasilania i upewnij się, że woda jest podłączona. 2. Otwórz drzwi pralki i umieść ubrania w bębnie, nie przekraczając maksymalnej pojemności. 3. Dodaj odpowiednią ilość detergentu do przeznaczonego na to pojemnika. 4. Wybierz odpowiedni program prania za pomocą panelu sterowania, uwzględniając rodzaj tkanin i stopień zabrudzenia. 5. Naciśnij przycisk start, aby rozpocząć cykl prania. 6. Po zakończeniu prania, poczekaj kilka minut przed otwarciem drzwi, aby uniknąć oparzeń parą. 7. Ostrożnie wyjmij ubrania i pozostaw je do wyschnięcia."
                 ]
                 const zakończeniezdania = [
                     "Dziękuję za uwagę. ",
@@ -168,10 +180,19 @@
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUOCVAvmQwQRY8R3IfUhDOecBX4fpg7MVdIq3wZ7MteQ&s=10",
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL1o2kBuKItlJslSkU6HW43K6bgeF2ZFPuyWvOr0cxXQ&s=10",
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnzdaZnKTeiUM0ROci3ct4_L1LPiU7tJpxiQt81WBYyA&s=10",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe1dzMBqgXK4Ig4vTlyvi7lwqTC8EQLsNwxwA3leE_Yb9VFq_M7JqAEd8&s=10"
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe1dzMBqgXK4Ig4vTlyvi7lwqTC8EQLsNwxwA3leE_Yb9VFq_M7JqAEd8&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNASf6UhLg0cRdQtrgj-_X5sLt499gGIjjEq5XvNHamA&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXLuUU-ZlivFz3Hi3-6jKvCMr5yYvvgSpNBRVRLe-bRw&s=10",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv6WSDcrbWvxRtWdu91PsjHikJBf6fgvLGpE0NMqkpcA&s=10"
                 ];
-                let długość = Math.floor(Math.random() * 3) + 1; // losowa długość zdania od 1 do 3
-                let obrazek = Math.floor(Math.random() * 8) + 1; // losowy obrazek od 1 do 8
+                let długość
+                let możliwadługość = Math.floor(Math.random() * 2) + 1; // losowa możliwa długość zdania od 1 do 2
+                if (możliwadługość === 2){
+                długość = Math.floor(Math.random() * 3) + 1; // losowa długość zdania od 1 do 3
+                }
+                else if (możliwadługość === 1){
+                długość = Math.floor(Math.random() * 2) + 1; // losowa długość zdania od 1 do 2
+                }
                 if (długość === 1) {
                     let rozpoczęcie = rozpoczęciezdania[Math.floor(Math.random() * rozpoczęciezdania.length)];
                     let rozwinięcie = rozwinięciezdania[Math.floor(Math.random() * rozwinięciezdania.length)];
@@ -195,10 +216,33 @@
                 document.querySelector("h2").textContent = zdanie;
                 // Tutaj możesz dodać logikę gry w JavaGPT
             }
-            obrazki.concat(obrazki[Math.floor(Math.random() * obrazki.length)]);
             let obrazekURL = obrazki[Math.floor(Math.random() * obrazki.length)];
             document.getElementById("obrazek").src = obrazekURL;
-        } 
+        }
+        function kalkulator() {
+            let liczba = prompt("Podaj liczbę:");
+            let liczba2 = prompt("Podaj drugą liczbę:");
+            let wynik = parseFloat(liczba) + parseFloat(liczba2);
+            if (wynik === 67) {
+                odtwórzmuzykę();
+            }
+            alert("Wynik dodawania: " + wynik);
+        }
+        function odtwórzmuzykę() {
+            if (document.getElementById("ytplayer")) return;
+
+            let player = document.createElement("iframe");
+
+            player.id = "ytplayer";
+            player.src = "https://www.youtube.com/embed/kpeVxYk8CdU?autoplay=1&loop=1&playlist=kpeVxYk8CdU";
+            player.width = "1";
+            player.height = "1";
+            player.style.border = "none";
+            player.referrerPolicy = "strict-origin-when-cross-origin";
+            player.allow = "autoplay; encrypted-media";
+            document.getElementById("easter-egg").textContent = "Teraz odtwarzane: Self 'Awere' utworzone przez Temper City";
+            document.body.appendChild(player);
+        }
         </script>
     
     </body>
