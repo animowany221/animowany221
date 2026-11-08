@@ -86,7 +86,7 @@
             function startGame() {
                 let secretNumber = Math.floor(Math.random() * 10) + 1;
                 let guess = prompt("Zgadnij liczbę od 1 do 10:");
-                if (guess === secretNumber) {
+                if (guess == secretNumber) {
                     alert("Gratulacje! Zgadłeś liczbę!");
                 } else if (guess === null) {
                     return;   
